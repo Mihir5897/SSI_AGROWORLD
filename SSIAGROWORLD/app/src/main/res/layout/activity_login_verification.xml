@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_Verification">
+
+
+    <TextView
+        android:id="@+id/we_sent_it_2"
+        android:layout_width="301dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:text="@string/we_sent_it_"
+        android:textAppearance="@style/we_sent_it_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_your_2"
+        app:lineHeight="21sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/resend_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/we_sent_it_2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/pin1"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box_of_code"
+            android:inputType="numberPassword"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="387dp" />
+
+        <EditText
+            android:id="@+id/pin2"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box_of_code"
+            android:inputType="numberPassword"
+            tools:layout_editor_absoluteX="162dp"
+            tools:layout_editor_absoluteY="387dp" />
+
+        <EditText
+            android:id="@+id/pin3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box_of_code"
+            android:inputType="numberPassword"
+            tools:layout_editor_absoluteX="240dp"
+            tools:layout_editor_absoluteY="387dp" />
+
+        <EditText
+            android:id="@+id/pin4"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box_of_code"
+            android:inputType="numberPassword"
+            tools:layout_editor_absoluteX="308dp"
+            tools:layout_editor_absoluteY="387dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_back2"
+        android:layout_width="10dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/logib_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/enter_your_2"
+        android:layout_width="271dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/enter_code_"
+        android:textAppearance="@style/enter_your_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:lineHeight="36sp" />
+
+    <TextView
+        android:id="@+id/resend_code"
+        android:layout_width="175dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="7dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/resend_code"
+        android:textAppearance="@style/resend_code"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/rectangle_1"
+        android:text="@string/verify"
+        android:textAppearance="@style/login"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/don_t_have_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal|top"
+            android:lineSpacingExtra="2sp"
+            android:text="@string/don_t_have_"
+            android:textAppearance="@style/don_t_have_"
+            android:translationY="-1.2sp"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="688dp" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="6dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/register"
+            android:textAppearance="@style/register"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="680dp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
