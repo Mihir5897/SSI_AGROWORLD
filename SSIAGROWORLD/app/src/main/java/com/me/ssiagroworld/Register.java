@@ -2,25 +2,121 @@ package com.me.ssiagroworld;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Register extends AppCompatActivity {
-Button register;
+public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    Button register;
+    Spinner spino;
+    EditText f_name, email, phone, l_name;
+    boolean isFristNameValid, isEmailValid, isPhoneValid, isLastNameValid;
+    String[] user_type = {"BDE", "BDA", "BDB", "BDC",};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
-        register=findViewById(R.id.btn_register);
+        // Take the instance of Spinner and
+        // apply OnItemSelectedListener on it which
+        // tells which item of spinner is clicked
+        spino = findViewById(R.id.spinner_select_user);
+        spino.setOnItemSelectedListener(this);
+        // Create the instance of ArrayAdapter
+        // having the list of courses
+        ArrayAdapter ad = new ArrayAdapter(this,
+                android.R.layout.simple_spinner_item,user_type);
+        // set simple layout resource file
+        // for each item of spinner
+        ad.setDropDownViewResource(android.R.layout
+                        .simple_spinner_dropdown_item);
+        // Set the ArrayAdapter (ad) data on the
+        // Spinner which binds data to spinner
+        spino.setAdapter(ad);
+
+        l_name = findViewById(R.id.rectangle_last_name);
+        f_name = findViewById(R.id.rectangle_frist_name);
+        email = findViewById(R.id.enter_email);
+        phone = findViewById(R.id.edt_phone);
+        register = findViewById(R.id.btn_register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Register.this,Verification.class);
-                startActivity(intent);
+                SetValidation();
+                if (isFristNameValid && isEmailValid && isPhoneValid && isLastNameValid) {
+                    Intent intent = new Intent(Register.this, Verification.class);
+                    startActivity(intent);
+                }
             }
         });
     }
 
+    public void SetValidation() {
+        // Check for a valid name.
+        if (f_name.getText().toString().isEmpty()) {
+            f_name.setError(getResources().getString(R.string.name_error));
+            isFristNameValid = false;
+        } else {
+            isFristNameValid = true;
+        }
+
+        // Check for a valid Last name.
+        if (l_name.getText().toString().isEmpty()) {
+            l_name.setError(getResources().getString(R.string.last_error));
+            isLastNameValid = false;
+        } else {
+            isLastNameValid = true;
+        }
+
+        // Check for a valid email address.
+        if (email.getText().toString().isEmpty()) {
+            email.setError(getResources().getString(R.string.email_error));
+            email.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_error, 0);
+            isEmailValid = false;
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()) {
+            email.setError(getResources().getString(R.string.error_invalid_email));
+            email.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_error, 0);
+
+            isEmailValid = false;
+        } else {
+            email.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+            isEmailValid = true;
+        }
+
+        // Check for a valid phone number.
+        if (phone.getText().toString().isEmpty()) {
+            phone.setError(getResources().getString(R.string.phone_error));
+            isPhoneValid = false;
+        } else if (!android.util.Patterns.PHONE.matcher(phone.getText().toString()).matches()) {
+            phone.setError(getResources().getString(R.string.phone_invalid_error));
+
+            isPhoneValid = false;
+        } else {
+            isPhoneValid = true;
+        }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+// make toastof name of course
+        // which is selected in spinner
+        Toast.makeText(getApplicationContext(),
+                user_type[position],
+                Toast.LENGTH_LONG)
+                .show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }
