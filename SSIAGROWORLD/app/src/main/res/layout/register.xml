@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16sp"
+    android:scrollbarSize="10sp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rotationX="0">
+
+        <EditText
+            android:id="@+id/enter_email"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_box"
+            android:hint="@string/enter_email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="20dp"
+            android:textAppearance="@style/enter_email"
+            app:layout_constraintStart_toStartOf="@+id/phone_numbe"
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_last_name" />
+
+        <ImageView
+            android:id="@+id/group_2982"
+            android:layout_width="159dp"
+            android:layout_height="122dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="204dp"
+            android:background="#00000000"
+            android:src="@drawable/registerion_pic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/select_user"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="bottom"
+            android:lineSpacingExtra="7sp"
+            android:text="@string/select_user"
+            android:textAppearance="@style/select_user"
+            android:translationY="-3.5sp"
+            app:layout_constraintBottom_toTopOf="@+id/rectangle_select_user"
+            app:layout_constraintStart_toStartOf="@+id/rectangle_select_user"
+            app:layout_constraintTop_toBottomOf="@+id/hello_sign_" />
+
+        <TextView
+            android:id="@+id/hello_sign_"
+            android:layout_width="229dp"
+            android:layout_height="73dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="118dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/hello_sign_"
+            android:textAppearance="@style/hello_sign_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_2982"
+            app:lineHeight="36sp" />
+
+        <EditText
+
+            android:id="@+id/rectangle_last_name"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_box"
+            android:hint="@string/enter_last_"
+            android:paddingLeft="20dp"
+            android:textAppearance="@style/enter_last_"
+            app:layout_constraintStart_toStartOf="@+id/email_id_"
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_frist_name" />
+
+        <RelativeLayout
+            android:id="@+id/rectangle_select_user"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hello_sign_">
+
+            <TextView
+                android:id="@+id/bde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/bde"
+                android:textAppearance="@style/bde"
+                android:translationY="2sp"
+                app:lineHeight="25sp" />
+
+            <ImageView
+                android:id="@+id/vector_706"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/user_name"
+                android:src="@drawable/more_name" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/email_id_"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/poppins"
+            android:gravity="bottom"
+            android:lineSpacingExtra="7sp"
+            android:text="@string/email_id_"
+            android:textAppearance="@style/email_id_"
+            android:translationY="-3.5sp"
+            app:layout_constraintBottom_toTopOf="@+id/enter_email"
+            app:layout_constraintStart_toStartOf="@+id/enter_email"
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_last_name"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/last_name_"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/poppins"
+            android:gravity="bottom"
+            android:lineSpacingExtra="7sp"
+            android:text="@string/last_name_"
+            android:textAppearance="@style/last_name_"
+            android:translationY="-3.5sp"
+            app:layout_constraintBottom_toTopOf="@+id/rectangle_last_name"
+            app:layout_constraintStart_toStartOf="@+id/rectangle_last_name"
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_frist_name"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/first_name_"
+            android:layout_width="78dp"
+            android:layout_height="18dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/first_name_"
+            android:textAppearance="@style/first_name_"
+            app:layout_constraintBottom_toTopOf="@+id/rectangle_frist_name"
+            app:layout_constraintStart_toStartOf="@+id/rectangle_frist_name"
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_select_user"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/rectangle_frist_name"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_box"
+            android:hint="@string/enter_first"
+            android:paddingLeft="20dp"
+            android:textAppearance="@style/enter_first"
+            app:layout_constraintStart_toStartOf="@+id/last_name_"
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_select_user" />
+
+        <TextView
+            android:id="@+id/already_hav"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/already_hav"
+            android:textAppearance="@style/already_hav"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+             />
+
+        <TextView
+            android:id="@+id/phone_numbe"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/poppins"
+            android:gravity="bottom"
+            android:lineSpacingExtra="7sp"
+            android:text="@string/phone_numbe"
+            android:textAppearance="@style/phone_numbe"
+            android:translationY="-3.5sp"
+            app:layout_constraintBottom_toTopOf="@+id/phone"
+            app:layout_constraintStart_toStartOf="@+id/phone"
+            app:layout_constraintTop_toBottomOf="@+id/enter_email"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <LinearLayout
+            android:id="@+id/phone"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_box"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_email">
+
+            <ImageView
+                android:id="@+id/india_1"
+                android:layout_width="18dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:src="@drawable/india" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="6dp"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                app:srcCompat="@drawable/more" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:inputType="phone" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_1"
+            android:text="@string/register"
+            android:textAppearance="@style/login"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout >
+    </ScrollView>
