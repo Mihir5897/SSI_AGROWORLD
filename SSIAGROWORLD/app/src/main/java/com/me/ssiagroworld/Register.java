@@ -15,7 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Button register;
+    Button register,more;
     Spinner spino;
     EditText f_name, email, phone, l_name;
     boolean isFristNameValid, isEmailValid, isPhoneValid, isLastNameValid;
@@ -47,6 +47,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
         email = findViewById(R.id.enter_email);
         phone = findViewById(R.id.edt_phone);
         register = findViewById(R.id.btn_register);
+        more =findViewById(R.id.btn_more);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,22 +58,36 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                 }
             }
         });
+        more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spino.performClick();
+//                if(spino.getSelectedItem() == null) { // user selected nothing...
+//                    spino.performClick();
+//                }
+            }
+        });
     }
 
     public void SetValidation() {
         // Check for a valid name.
         if (f_name.getText().toString().isEmpty()) {
+            f_name.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_error, 0);
             f_name.setError(getResources().getString(R.string.name_error));
+
             isFristNameValid = false;
         } else {
+            f_name.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
             isFristNameValid = true;
         }
 
         // Check for a valid Last name.
         if (l_name.getText().toString().isEmpty()) {
+            l_name.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_error, 0);
             l_name.setError(getResources().getString(R.string.last_error));
             isLastNameValid = false;
         } else {
+            l_name.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
             isLastNameValid = true;
         }
 
@@ -94,13 +109,16 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
 
         // Check for a valid phone number.
         if (phone.getText().toString().isEmpty()) {
+            phone.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_error, 0);
             phone.setError(getResources().getString(R.string.phone_error));
             isPhoneValid = false;
         } else if (!android.util.Patterns.PHONE.matcher(phone.getText().toString()).matches()) {
+            phone.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_error, 0);
             phone.setError(getResources().getString(R.string.phone_invalid_error));
 
             isPhoneValid = false;
         } else {
+            phone.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
             isPhoneValid = true;
         }
     }
@@ -119,4 +137,5 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
 }
