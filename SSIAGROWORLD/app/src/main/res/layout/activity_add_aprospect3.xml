@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_a_Prospect_3"
+    android:orientation="vertical">
+    <include layout="@layout/add_prospect_header"/>
+    <TextView
+        android:text="@string/poc_name"
+        style="@style/TextInputLayoutHeading"/>
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/etPocName"
+        style="@style/TextInputLayoutStyle"
+        android:layout_marginTop="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditTextStyle"
+            android:hint="@string/enter_name_" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:text="@string/poc_type_te"
+        style="@style/TextInputLayoutHeading"/>
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/etPocType"
+        style="@style/TextInputLayoutStyle"
+        android:layout_marginTop="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditTextStyle"
+            android:hint="@string/enter_name_" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:text="@string/poc_phone_n"
+        style="@style/TextInputLayoutHeading"/>
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/etPocphoneno"
+        style="@style/TextInputLayoutStyle"
+        android:layout_marginTop="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditTextStyle"
+            android:layout_height="48dp"
+            android:inputType="phone"
+            android:hint="@string/enter_poc_b" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:text="@string/poc_email_i"
+        style="@style/TextInputLayoutHeading"/>
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/etPocEmail"
+        style="@style/TextInputLayoutStyle"
+        android:layout_marginTop="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditTextStyle"
+            android:inputType="textEmailAddress"
+            android:hint="@string/enter_name_" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:text="@string/lead_source"
+        style="@style/TextInputLayoutHeading"/>
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerLeadSourcceType"
+        style="@style/SpinnerTheme"
+        />
+    <include layout="@layout/add_prospect_bottom_button"/>
+
+</LinearLayout>
