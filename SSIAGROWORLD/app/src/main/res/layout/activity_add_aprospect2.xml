@@ -8,6 +8,17 @@
     tools:context=".Add_a_Prospect_2"
     android:orientation="vertical">
     <include layout="@layout/add_prospect_header"/>
+    <ScrollView
+        android:id="@+id/scrollViewcenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="10sp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
     <TextView
         android:text="@string/email_addre"
         style="@style/TextInputLayoutHeading"/>
@@ -73,7 +84,8 @@
 
         android:id="@+id/etbusinessemail"
         style="@style/TextInputLayoutStyle"
-        android:layout_marginTop="0dp">
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="30dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:inputType="textEmailAddress"
@@ -81,6 +93,9 @@
             android:hint="@string/enter_email_here" />
 
     </com.google.android.material.textfield.TextInputLayout>
-    <include layout="@layout/add_prospect_bottom_button"/>
+        <include layout="@layout/add_prospect_bottom_button"/>
 
+
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

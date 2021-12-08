@@ -1,114 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Add_a_Prospect_1">
-
-    <include layout="@layout/add_prospect_header" />
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-
-        android:layout_height="match_parent"
-        android:scrollbarSize="10sp">
-
-        <LinearLayout
+    <include
+        layout="@layout/add_prospect_header"
+ />
+        <ScrollView
+            android:id="@+id/scrollViewcenter"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="30dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/header">
+            android:layout_height="match_parent"
+
+            android:scrollbarSize="10sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header">
 
 
-            <TextView
-                style="@style/TextInputLayoutHeading"
-                android:text="@string/company_nam" />
+                <TextView
+                    style="@style/TextInputLayoutHeading"
+                    android:text="@string/company_nam" />
 
-            <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
 
-                android:id="@+id/etcountryselect"
-                style="@style/TextInputLayoutStyle"
-                android:layout_marginTop="0dp">
+                    android:id="@+id/etcountryselect"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_marginTop="0dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    style="@style/TextInputEditTextStyle"
-                    android:hint="@string/systango_te" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/TextInputEditTextStyle"
+                        android:hint="@string/systango_te" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                style="@style/TextInputLayoutHeading"
-                android:text="@string/country" />
+                <TextView
+                    style="@style/TextInputLayoutHeading"
+                    android:text="@string/country" />
 
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/spinnercountry"
-                style="@style/SpinnerTheme" />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnercountry"
+                    style="@style/SpinnerTheme" />
 
-            <TextView
-                style="@style/TextInputLayoutHeading"
-                android:text="@string/state" />
+                <TextView
+                    style="@style/TextInputLayoutHeading"
+                    android:text="@string/state" />
 
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/spinnerstate"
-                style="@style/SpinnerTheme" />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerstate"
+                    style="@style/SpinnerTheme" />
 
-            <TextView
-                style="@style/TextInputLayoutHeading"
-                android:text="@string/city" />
+                <TextView
+                    style="@style/TextInputLayoutHeading"
+                    android:text="@string/city" />
 
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/spinnercity"
-                style="@style/SpinnerTheme" />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnercity"
+                    style="@style/SpinnerTheme" />
 
-            <TextView
-                style="@style/TextInputLayoutHeading"
-                android:text="@string/address" />
+                <TextView
+                    style="@style/TextInputLayoutHeading"
+                    android:text="@string/address" />
 
-            <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
 
-                android:id="@+id/etaddress"
-                style="@style/TextInputLayoutStyle"
-                android:layout_marginTop="0dp">
+                    android:id="@+id/etaddress"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_marginTop="0dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    style="@style/TextInputEditTextStyle"
-                    android:hint="@string/enter_addre" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/TextInputEditTextStyle"
+                        android:hint="@string/enter_addre" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                style="@style/TextInputLayoutHeading"
-                android:text="@string/pin_code" />
+                <TextView
+                    style="@style/TextInputLayoutHeading"
+                    android:text="@string/pin_code" />
 
-            <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
 
-                android:id="@+id/etpin"
-                style="@style/TextInputLayoutStyle"
-                android:layout_marginTop="0dp">
+                    android:id="@+id/etpin"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_marginTop="0dp"
+                    >
 
-                <com.google.android.material.textfield.TextInputEditText
-                    style="@style/TextInputEditTextStyle"
-                    android:inputType="number"
-                    android:text="@string/some_pin" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/TextInputEditTextStyle"
+                        android:inputType="number"
+                        android:text="@string/some_pin"
+                        />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-
-        </LinearLayout>
-    </ScrollView>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/registerBtn"
-        style="@style/PrimaryButtonTheme"
-        android:layout_marginBottom="30dp"
-        android:stateListAnimator="@null"
-        android:text="@string/next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="30dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/registerBtn"
+                    style="@style/PrimaryButtonTheme"
+                    android:stateListAnimator="@null"
+                    android:text="@string/next"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    />
+            </LinearLayout>
+        </ScrollView>
+</LinearLayout>
