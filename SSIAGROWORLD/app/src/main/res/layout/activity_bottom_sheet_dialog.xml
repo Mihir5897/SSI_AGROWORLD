@@ -68,15 +68,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/your_succes" />
 
-    <Button
+    <ImageView
         android:id="@+id/btnclear"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/user_clear_btn_"
+        android:background="@drawable/ic_user_clear_btn_"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

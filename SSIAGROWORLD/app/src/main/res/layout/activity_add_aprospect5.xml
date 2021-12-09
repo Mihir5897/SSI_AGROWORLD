@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Add_a_Prospect_5">
+    <include layout="@layout/add_prospect_header"/>
+    <TextView
+        android:text="@string/product_cat"
+        style="@style/TextInputLayoutHeading"/>
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerProductCategory"
+        style="@style/SpinnerTheme"
+        />
+    <include layout="@layout/add_prospect_bottom_button"/>
+
+
+</LinearLayout>

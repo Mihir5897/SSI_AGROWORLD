@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_bg"
+    android:clipToOutline="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/exit_confir"
+        android:textAppearance="@style/aditya_gupt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/clearImage"
+        android:onClick="clear"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/ic_user_clear_btn_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+
+        android:background="@drawable/ic_icon_exit_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="249dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/the_changes"
+        android:textAppearance="@style/agupta_syst"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnYes"
+        style="@style/yes"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="30dp"
+        android:stateListAnimator="@null"
+        android:text="@string/yes"
+        android:textAppearance="@style/login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        style="@style/frist"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="30dp"
+        android:stateListAnimator="@null"
+        android:text="@string/cancell"
+        android:textAppearance="@style/cancel"
+        android:textColor="@color/Bo_na_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnYes"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:strokeColor="@color/Bo_na_yellow" />
+</androidx.constraintlayout.widget.ConstraintLayout>
