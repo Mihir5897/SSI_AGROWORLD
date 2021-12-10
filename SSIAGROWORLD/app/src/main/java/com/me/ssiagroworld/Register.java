@@ -3,11 +3,7 @@ package com.me.ssiagroworld;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,7 +26,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_try);
+        setContentView(R.layout.activity_recycelview_checkbox);
         // Take the instance of Spinner and
         // apply OnItemSelectedListener on it which
         // tells which item of spinner is clicked

@@ -1,38 +1,22 @@
 package com.me.ssiagroworld;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.util.Patterns;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 
-public class Try extends AppCompatActivity implements  CheckboxListener{
+public class Recycelview_checkbox extends AppCompatActivity implements  CheckboxListener{
 RecyclerView recyclerView;
     CheckboxAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_try);
+        setContentView(R.layout.activity_recycelview_checkbox);
         recyclerView= findViewById(R.id.recyclerview);
         setrecycleView();
 
@@ -54,7 +38,7 @@ RecyclerView recyclerView;
     }
     private void setrecycleView() {
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(1,LinearLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));//LinearLayoutManager
         adapter = new CheckboxAdapter(this,getcheckboxtext(),this);
         recyclerView.setAdapter(adapter);
     }

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.checkbox.MaterialCheckBox;
 
 import java.util.ArrayList;
@@ -20,7 +21,8 @@ public class CheckboxAdapter extends RecyclerView.Adapter<CheckboxAdapter.ViewHo
     CheckboxListener checkboxListener;
     ArrayList<String> newtext = new ArrayList<>();
 
-    public CheckboxAdapter(Context context, ArrayList<String> checkboxtext, CheckboxListener checkboxListener) {
+    public CheckboxAdapter(Context context, ArrayList<String> checkboxtext,
+                           CheckboxListener checkboxListener) {
         this.context = context;
         this.checkboxtext = checkboxtext;
         this.checkboxListener = checkboxListener;
@@ -47,9 +49,13 @@ public class CheckboxAdapter extends RecyclerView.Adapter<CheckboxAdapter.ViewHo
                 public void onClick(View v) {
                     if (holder.recycler_checkbox.isChecked()) {
                         newtext.add(checkboxtext.get(position));
+                        holder.materialCardView.setStrokeColor(context.getResources()
+                                .getColor(R.color.colorPrimary));
+
                     } else {
                         newtext.remove(checkboxtext.get(position));
-
+                        holder.materialCardView.setStrokeColor(context.getResources()
+                                .getColor(R.color.boxcolour));
                     }
                     checkboxListener.ontextchange(newtext);
                 }
@@ -65,11 +71,13 @@ public class CheckboxAdapter extends RecyclerView.Adapter<CheckboxAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public MaterialCheckBox recycler_checkbox;
+        public MaterialCardView materialCardView;
 
         public ViewHolder(View view) {
             super(view);
             //type cast not required for level 26 and above but still...!
             recycler_checkbox = (MaterialCheckBox) view.findViewById(R.id.chechbox);
+            materialCardView = (MaterialCardView) itemView.findViewById(R.id.checkCardview);
         }
     }
 }

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/leadCardview"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_profile_image"
+            android:layout_toLeftOf="@id/textllv"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileTv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:src="@drawable/ic_profile_image"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/textllv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toLeftOf="@id/call"
+            android:layout_toRightOf="@id/profileTv"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txcompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:lineHeight="24sp"
+                android:maxLines="2"
+                android:text="@string/systango"
+                android:textColor="#020334"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:lineHeight="20sp"
+                android:maxLines="2"
+                android:text="@string/a_2_indore_"
+                android:textColor="#020334"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/textviewbg"
+                android:fontFamily="@font/poppins"
+                android:lineHeight="15sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/prospect"
+                android:textColor="#FFB700"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_call" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
