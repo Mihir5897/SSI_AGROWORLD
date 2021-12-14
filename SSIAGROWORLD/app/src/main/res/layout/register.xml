@@ -200,29 +200,30 @@
                 android:id="@+id/india_1"
                 android:layout_width="18dp"
                 android:layout_height="21dp"
+                android:layout_marginStart="10dp"
                 android:layout_gravity="center"
-                android:layout_weight="10"
                 android:src="@drawable/india" />
 
             <ImageView
                 android:layout_width="10dp"
                 android:layout_height="6dp"
+                android:layout_marginStart="10dp"
                 android:layout_gravity="center"
-                android:layout_weight="10"
                 app:srcCompat="@drawable/more" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edt_phonee"
                 style="@style/TextInputLayoutStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:errorIconDrawable="@drawable/ic_end_error"
-                android:layout_weight="80"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:inputType="phone"
                     android:hint="@string/enter_your_"
                     android:textAppearance="@style/enter_your_nu"

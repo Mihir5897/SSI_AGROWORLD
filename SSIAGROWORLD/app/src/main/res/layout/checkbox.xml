@@ -6,13 +6,13 @@
     android:id="@+id/checkCardview"
     style="@style/ShapeAppearance.App.MediumComponent"
     android:layout_width="wrap_content"
-    android:layout_height="60dp">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/chechbox"
         style="@style/Widget.App.CheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:gravity="center"
         android:text="demo" />
 </com.google.android.material.card.MaterialCardView>

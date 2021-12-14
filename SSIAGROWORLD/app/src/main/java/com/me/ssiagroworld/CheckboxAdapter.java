@@ -77,7 +77,7 @@ public class CheckboxAdapter extends RecyclerView.Adapter<CheckboxAdapter.ViewHo
             super(view);
             //type cast not required for level 26 and above but still...!
             recycler_checkbox = (MaterialCheckBox) view.findViewById(R.id.chechbox);
-            materialCardView = (MaterialCardView) itemView.findViewById(R.id.checkCardview);
+            materialCardView = (MaterialCardView) view.findViewById(R.id.checkCardview);
         }
     }
 }

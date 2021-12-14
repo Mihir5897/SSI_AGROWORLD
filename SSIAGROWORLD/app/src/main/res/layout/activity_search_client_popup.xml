@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Search_Client_Popup">
+
+    <TextView
+        android:id="@+id/filter_lead"
+        android:layout_width="116dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/filter_lead"
+        android:textAppearance="@style/aditya_gupt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/ic_user_clear_btn_"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/filter_lead">
+
+        <TextView
+            style="@style/TextInputLayoutHeading"
+            android:text="@string/search_by_n" />
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/etsearcname"
+            style="@style/TextInputLayoutStyle"
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="120dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputEditTextStyle"
+                android:hint="@string/enter_name_"
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="177dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/TextInputLayoutHeading"
+            android:text="@string/search_by_p" />
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/etsearchproduct"
+            style="@style/TextInputLayoutStyle"
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="120dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputEditTextStyle"
+                android:hint="@string/enter_produ"
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="177dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/TextInputLayoutHeading"
+            android:text="@string/search_by_s" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_searchbystage"
+            style="@style/SpinnerTheme" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_filterLead"
+            style="@style/PrimaryButtonTheme"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:stateListAnimator="@null"
+            android:text="@string/filterlead" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,10 +11,9 @@
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="111dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/enter_your_"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="110dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
@@ -30,15 +29,13 @@
 
     <TextView
         android:id="@+id/enter_your_"
-        android:layout_width="243dp"
-        android:layout_height="70dp"
+        android:layout_width="234dp"
+        android:layout_height="79dp"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/enter_your_"
         android:textAppearance="@style/enter_your_"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/we_will_sen"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
         app:lineHeight="36sp" />
 
@@ -53,9 +50,7 @@
         android:gravity="top"
         android:text="@string/we_will_sen"
         android:textAppearance="@style/we_will_sen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/phone"
+        app:layout_constraintStart_toStartOf="@+id/enter_your_"
         app:layout_constraintTop_toBottomOf="@+id/enter_your_"
         app:lineHeight="21sp" />
 
@@ -66,11 +61,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="30dp"
+        android:layout_marginBottom="335dp"
         android:background="@drawable/rectangle_box"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/BtnLogin"
+        app:layout_constraintStart_toStartOf="@+id/we_will_sen"
         app:layout_constraintTop_toBottomOf="@+id/we_will_sen">
 
         <ImageView
@@ -78,55 +73,60 @@
             android:layout_width="18dp"
             android:layout_height="21dp"
             android:layout_gravity="center"
-            android:layout_weight="10"
+            android:layout_marginStart="10dp"
             android:src="@drawable/india" />
 
         <ImageView
             android:layout_width="10dp"
             android:layout_height="6dp"
             android:layout_gravity="center"
-            android:layout_weight="10"
+            android:layout_marginStart="10dp"
             app:srcCompat="@drawable/more" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="80"
-            android:fontFamily="@font/poppins"
-            android:hint="@string/some_id"
-            android:inputType="phone"
-            android:paddingLeft="20dp"
-            android:textAppearance="@style/some_id" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_phone_login"
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:errorIconDrawable="@drawable/ic_end_error"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="phone"
+                android:hint="@string/enter_your_"
+                android:textAppearance="@style/enter_your_nu"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="208dp"
-        android:background="@drawable/rectangle_1"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BtnLogin"
+        style="@style/PrimaryButtonTheme"
+        android:layout_height="48dp"
+        android:layout_marginBottom="15dp"
+        android:stateListAnimator="@null"
         android:text="@string/login1"
-        android:textAppearance="@style/login"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_height="16dp"
         android:layout_marginBottom="25dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <TextView

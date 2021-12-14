@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,24 +15,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.me.ssiagroworld.Api.RetrofitApiClient;
+import com.me.ssiagroworld.Request.RegistrationRequest;
+import com.me.ssiagroworld.Responce.RegistrationResponse;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Button register;
     Spinner spino;
     TextView txfrist, txlast, txphone, txemail;
     TextInputLayout f_name, email, phone, l_name;
+    int role;
     boolean isFristNameValid, isEmailValid, isPhoneValid, isLastNameValid;
-    String[] user_type = {"BDE", "BDA", "BDB", "BDC",};
+    String[] user_type = {"BDE", "BDA", "BDB", "BDC","MBA"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycelview_checkbox);
+        setContentView(R.layout.register);
         // Take the instance of Spinner and
         // apply OnItemSelectedListener on it which
         // tells which item of spinner is clicked
         spino = findViewById(R.id.userTypeSpinner);
-        spino.setOnItemSelectedListener(this);
+        spino.setOnItemSelectedListener(Register.this);
         // Create the instance of ArrayAdapter
         // having the list of courses
         ArrayAdapter ad = new ArrayAdapter(this,
@@ -58,14 +67,49 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
             public void onClick(View v) {
                 SetValidation();
                 if (isFristNameValid && isEmailValid && isPhoneValid && isLastNameValid) {
-                    Intent intent = new Intent(Register.this, Verification.class);
-                    startActivity(intent);
+
+                    callregistrationapi();
                 }
             }
         });
     }
 
-    public void SetValidation() {
+    private void callregistrationapi() {
+        RegistrationRequest registrationRequest =new RegistrationRequest();
+        registrationRequest.setEmail(email.getEditText().getText().toString());
+        registrationRequest.setFirstName(f_name.getEditText().getText().toString());
+        registrationRequest.setLastName(l_name.getEditText().getText().toString());
+        registrationRequest.setMobileNumber(phone.getEditText().getText().toString());
+        registrationRequest.setRole(role);
+
+
+        Call<RegistrationResponse> call = RetrofitApiClient
+                .getInstanse()
+                .getregistraionApi()
+                .register(registrationRequest);
+        call.enqueue(new Callback<RegistrationResponse>() {
+            @Override
+            public void onResponse(Call<RegistrationResponse> call, Response<RegistrationResponse> response) {
+                RegistrationResponse registrationResponse = response.body();
+                if (response.isSuccessful()){
+                    Toast.makeText(Register.this,registrationResponse.getMessage(),Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Register.this, Verification.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(getApplicationContext(), registrationResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<RegistrationResponse> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    public  void  SetValidation() {
         // Check for a valid name.
         if (f_name.getEditText().getText().toString().isEmpty()) {
             f_name.setError(getResources().getString(R.string.name_error));
@@ -128,10 +172,13 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         // make toast of name of course
         // which is selected in spinner
-        Toast.makeText(getApplicationContext(),
-                user_type[position],
-                Toast.LENGTH_LONG)
-                .show();
+//        Toast.makeText(getApplicationContext(),
+//                user_type[position],
+//                Toast.LENGTH_LONG)
+//                .show();
+        role=position+1;
+        Log.e("TAG", "onItemSelected: "+ role);
+       // Toast.makeText(getApplicationContext(), position, Toast.LENGTH_SHORT).show();
     }
 
     @Override
