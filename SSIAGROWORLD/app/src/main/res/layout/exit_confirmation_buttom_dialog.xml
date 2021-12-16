@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:clipToOutline="true"
-    android:background="@drawable/layout_bg"
-    >
 
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    >
+    <!--    android:background="@drawable/layout_bg"-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,12 +24,12 @@
 
     <ImageView
         android:id="@+id/clearImage"
-        android:onClick="clear"
         android:layout_width="12dp"
         android:layout_height="12dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/ic_user_clear_btn_"
+        android:onClick="clear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

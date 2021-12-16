@@ -15,10 +15,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.gson.Gson;
 import com.me.ssiagroworld.Api.RetrofitApiClient;
+import com.me.ssiagroworld.Error.ApiErrorResponse;
 import com.me.ssiagroworld.Request.RegistrationRequest;
 import com.me.ssiagroworld.Responce.RegistrationResponse;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -26,7 +29,7 @@ import retrofit2.Response;
 public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Button register;
     Spinner spino;
-    TextView txfrist, txlast, txphone, txemail;
+    TextView txfrist, txlast, txphone, txemail,redirectLogin;
     TextInputLayout f_name, email, phone, l_name;
     int role;
     boolean isFristNameValid, isEmailValid, isPhoneValid, isLastNameValid;
@@ -53,6 +56,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
         // Spinner which binds data to spinner
         spino.setAdapter(ad);
 
+        redirectLogin=findViewById(R.id.already_hav);
         txfrist = findViewById(R.id.first_name_3);
         txlast = findViewById(R.id.last_name);
         txphone = findViewById(R.id.phone_numbe);
@@ -72,6 +76,21 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                 }
             }
         });
+        redirectLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Register.this, Login.class);
+                startActivity(intent);
+            }
+        });
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        //moveTaskToBack(true);
     }
 
     private void callregistrationapi() {
@@ -93,12 +112,25 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                 RegistrationResponse registrationResponse = response.body();
                 if (response.isSuccessful()){
                     Toast.makeText(Register.this,registrationResponse.getMessage(),Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Register.this, Verification.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    Intent intent = new Intent(Register.this, Login.class);
+                    //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
-                }else {
-                    Toast.makeText(getApplicationContext(), registrationResponse.getMessage(), Toast.LENGTH_SHORT).show();
+               }else if (response.code() == 400) {
+                    ResponseBody body = response.errorBody();
+                    Gson gson = new Gson();
+                    ApiErrorResponse apiErrorResponse;
+                    String content = null;
+                    try {
+                        content = body.string();
+                        apiErrorResponse = gson.fromJson(content, ApiErrorResponse.class);
+                        Toast.makeText(getApplicationContext(), apiErrorResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
+//                else {
+//                    Toast.makeText(getApplicationContext(), registrationResponse.getMessage(), Toast.LENGTH_SHORT).show();
+//                }
             }
 
             @Override

@@ -48,6 +48,51 @@ TextView headertext;
     }
     private List<DataModelofLeads> getDataList() {
         List<DataModelofLeads> dataModelList = new ArrayList<>();
+        DataModelofLeads dataModel10 = new DataModelofLeads();
+        dataModel10.setProfileurl("");
+        dataModel10.setProfileAltText("S");
+        dataModel10.setProfileid(R.drawable.ic_profile_image);
+        dataModel10.setCompanyname("systango");
+        dataModel10.setCompanyaddress("A-2, Indore, Madhya Pradesh");
+        dataModel10.setTag("prospect");
+        dataModelList.add(dataModel10);
+
+        DataModelofLeads dataModel9 = new DataModelofLeads();
+        dataModel9.setProfileurl("");
+        dataModel9.setProfileAltText("S");
+        dataModel9.setProfileid(R.drawable.ic_profile_image);
+        dataModel9.setCompanyname("systango");
+        dataModel9.setCompanyaddress("A-2, Indore, Madhya Pradesh");
+        dataModel9.setTag("prospect");
+        dataModelList.add(dataModel9);
+
+        DataModelofLeads dataModel8 = new DataModelofLeads();
+        dataModel8.setProfileurl("");
+        dataModel8.setProfileAltText("S");
+        dataModel8.setProfileid(R.drawable.ic_profile_image);
+        dataModel8.setCompanyname("systango");
+        dataModel8.setCompanyaddress("A-2, Indore, Madhya Pradesh");
+        dataModel8.setTag("prospect");
+        dataModelList.add(dataModel8);
+
+        DataModelofLeads dataModel7 = new DataModelofLeads();
+        dataModel7.setProfileurl("");
+        dataModel7.setProfileAltText("S");
+        dataModel7.setProfileid(R.drawable.ic_profile_image);
+        dataModel7.setCompanyname("systango");
+        dataModel7.setCompanyaddress("A-2, Indore, Madhya Pradesh");
+        dataModel7.setTag("prospect");
+        dataModelList.add(dataModel7);
+
+        DataModelofLeads dataModel6 = new DataModelofLeads();
+        dataModel6.setProfileurl("");
+        dataModel6.setProfileAltText("S");
+        dataModel6.setProfileid(R.drawable.ic_profile_image);
+        dataModel6.setCompanyname("systango");
+        dataModel6.setCompanyaddress("A-2, Indore, Madhya Pradesh");
+        dataModel6.setTag("prospect");
+        dataModelList.add(dataModel6);
+
         DataModelofLeads dataModel5 = new DataModelofLeads();
         dataModel5.setProfileurl("");
         dataModel5.setProfileAltText("S");
