@@ -1,0 +1,601 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SSIAGROWORLD" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Customize your theme here. -->
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Demo.BottomSheetDialog</item>
+    </style>
+    //Splase_Screen CODE
+
+    <style name="AppTheme.Splash" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="already_hav">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#5C5C7D</item>
+    </style>
+
+    <style name="login">
+        <item name="lineHeight">21sp</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="enter_email">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#B4B4C3</item>
+    </style>
+
+    <style name="phone_numbe">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#020334</item>
+    </style>
+
+    <style name="email_id_">
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="last_name_">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="enter_last_">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #B4B4C3
+        </item>
+
+    </style>
+
+    <style name="first_name_">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="enter_first">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #B4B4C3
+        </item>
+
+    </style>
+
+    <style name="select_user">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="hello_sign_">
+
+        <item name="android:textSize">
+            28sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="bde">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="enter_code_">
+
+        <item name="android:textSize">
+            28sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="we_sent_it_">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #8B8B9E
+        </item>
+
+    </style>
+
+    <style name="resend_code">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="thanks_for_">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="now_please_">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="continue1">
+
+        <item name="android:textSize">
+            16sp
+        </item>
+
+        <item name="android:letterSpacing">
+            -0.03
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="aditya">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="gupta">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="agupta_syst">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#020334</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="some_id">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #B4B4C3
+        </item>
+
+    </style>
+
+    <style name="home">
+
+        <item name="android:textSize">
+            10sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="my_meetings">
+
+        <item name="android:textSize">
+            10sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="leads">
+
+        <item name="android:textSize">
+            10sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="profile">
+
+        <item name="android:textSize">
+            10sp
+        </item>
+
+        <item name="android:textColor">
+            #FFB700
+        </item>
+
+    </style>
+
+    <style name="aditya_gupt">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="lineHeight">21sp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#020334</item>
+    </style>
+
+    <style name="success">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="your_succes">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #34345D
+        </item>
+
+    </style>
+
+    <style name="enter_your_">
+
+        <item name="android:textSize">
+            28sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="we_will_sen">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #5C5C7D
+        </item>
+
+    </style>
+
+    <style name="don_t_have_">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #8B8B9E
+        </item>
+
+    </style>
+
+    <style name="register">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #020334
+        </item>
+
+    </style>
+
+    <style name="enter_your_nu">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#B4B4C3</item>
+    </style>
+<!--    bottom dialog box-->
+    <style
+        name="ThemeOverlay.Demo.BottomSheetDialog"
+        parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Demo.BottomSheet</item>
+    </style>
+
+    <style name="Widget.Demo.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Demo</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.Demo" parent="">
+        <item name="cornerSize">30dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+<!--    clear button style-->
+    <style name="Clear.ButtonStyle"
+        parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/GreenButtonThemeOverlay</item>
+    </style>
+    <style name="GreenButtonThemeOverlay">
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <style name="cancel">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFB700</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="lineHeight">21sp</item>
+    </style>
+
+    <style name="heading">
+        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_width">202dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#020334</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="lineHeight">31sp</item>
+    </style>
+
+    <style name="textviewstyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#020334</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="lineHeight">25sp</item>
+    </style>
+
+    <style name="add_a_lead">
+
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textColor">#020334</item>
+        <item name="lineHeight">31sp</item>
+    </style>
+    <style name="buttonbackground">
+        <item name="backgroundTint">#020334</item>
+
+    </style>
+    <style name="filter">
+        <item name="backgroundTint">@color/white</item>
+        <item name="strokeColor">@color/boxcolour</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">30dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#5C5C7D</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="lineHeight">24sp</item>
+        <item name="backgroundColor">@color/colorWhite</item>
+        <item name="android:layout_marginStart">30dp</item>
+
+    </style>
+
+    <style name="SpinnerTheme" parent="Widget.AppCompat.Spinner.DropDown">
+        <item name="android:background">@drawable/bg_spinner</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">#020334</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:dropDownVerticalOffset">35dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:popupElevation">0dp</item>
+        <item name="android:spinnerMode">dropdown</item>
+    </style>
+
+    <style name="TextInputLayoutHeading">
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#020334</item>
+
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="boxStrokeColor">#e1e1e1</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="helperTextTextAppearance">@style/TextInputLayoutHelperText</item>
+        <item name="errorTextAppearance">@style/TextInputLayoutErrorText</item>
+        <item name="errorIconDrawable">@drawable/ic_end_error</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="TextInputEditTextStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">#020334</item>
+        <item name="hintTextColor">#B4B4C3</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="TextInputLayoutHelperText" parent="TextAppearance.Design.HelperText">
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="TextInputLayoutErrorText" parent="TextAppearance.Design.Error">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="PrimaryButtonTheme">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="backgroundTint">@color/primary_btn__color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+    </style>
+
+    <style name="second">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="backgroundTint">@color/primary_btn__color</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="cornerRadius">5dp</item>
+        <!--        <item name="android:layout_marginLeft">30dp</item>-->
+        <!--        <item name="android:layout_marginRight">30dp</item>-->
+    </style>
+
+    <style name="yes">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="backgroundTint">@color/Bo_na_yellow</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="cornerRadius">5dp</item>
+        <!--        <item name="android:layout_marginLeft">30dp</item>-->
+        <!--        <item name="android:layout_marginRight">30dp</item>-->
+    </style>
+
+    <style name="frist" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/primary_btn__color</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="boxStrokeColor">@color/primary_btn__color</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <!--        <item name="android:layout_marginLeft">30dp</item>-->
+        <item name="android:layout_marginRight">30dp</item>
+    </style>
+    <!--//cardviewtheme-->
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30dp</item>
+        <item name="strokeColor">@color/boxcolour</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+    <!--    checkbox style-->
+    <style name="Widget.App.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/button_tint</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#020334</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="Theme.SSIAGROWORLD.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.SSIAGROWORLD.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SSIAGROWORLD.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>
