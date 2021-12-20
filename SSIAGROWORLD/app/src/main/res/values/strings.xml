@@ -113,4 +113,6 @@
     <string name="enter_produ">Enter Product Name Here</string>
     <string name="search_by_s">Search by Stage</string>
     <string name="filterlead">Filter Lead</string>
+    <string name="dashboard">Dashboard</string>
+
 </resources>

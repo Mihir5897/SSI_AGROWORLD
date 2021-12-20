@@ -1,4 +1,4 @@
-package com.me.ssiagroworld;
+package com.me.ssiagroworld.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.textview.MaterialTextView;
+import com.me.ssiagroworld.Model.DataModelofLeads;
+import com.me.ssiagroworld.R;
 
 import java.util.List;
 

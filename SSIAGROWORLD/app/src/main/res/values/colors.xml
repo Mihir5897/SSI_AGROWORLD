@@ -18,4 +18,6 @@
     <color name="unselect">#020334</color>
     <color name="boxcolour">#E1E1E1</color>
     <color name="textviewbg">#FFF4D8</color>
+    <color name="dashboard_bg">#F3F3F3</color>
+
 </resources>

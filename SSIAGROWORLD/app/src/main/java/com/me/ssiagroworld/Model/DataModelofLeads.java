@@ -1,4 +1,4 @@
-package com.me.ssiagroworld;
+package com.me.ssiagroworld.Model;
 
 import android.content.Intent;
 
